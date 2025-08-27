@@ -37,8 +37,8 @@
 }
 
 .homepage-image-container {
-	width: 370px;
-	height: 370px;
+	width: 300px;
+	height: 250 px;
 }
 
 .homepage-image-wrapper {
@@ -49,6 +49,8 @@
 
 .homepage-image-wrapper img {
 	width: 100%;
+	height: auto; /* Keep aspect ratio */
+	object-fit: cover;
 }
 
 .homepage-socials {
@@ -100,7 +102,7 @@
 
 	.homepage-first-area-left-side {
 		display: flex;
-		flex-direction: column; /* Changed: set direction to column */
+		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
 		order: 2;
@@ -124,6 +126,8 @@
 	}
 
 	.homepage-image-container {
+		width: 80%; /* Make it smaller on mobile */
+		height: auto;
 		padding-top: 50px;
 		padding-bottom: 50px;
 		margin-left: 10px;
