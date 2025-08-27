@@ -1,7 +1,7 @@
 const INFO = {
 	main: {
 		title: "Rithvik's Portfolio",
-		name: "Rithvik 	k",
+		name: "Rithvik 	K",
 		email: "rithvikbng@gmail.com",
 		logo: "../logo.png",
 	},
@@ -15,7 +15,7 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "ML and Blockchain Developer",
+		title: "Hey there !👋",
 		description:
 			"I’m Rithvik, a passionate developer and AI enthusiast with hands-on experience in Python, ML, blockchain, and full-stack web development. I love building innovative projects, from AI-powered medical bots and IoT solutions to decentralized platforms and AR learning apps, I enjoy solving complex problems",
 	},
