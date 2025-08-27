@@ -1,24 +1,23 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Rithvik's Portfolio",
+		name: "Rithvik 	k",
+		email: "rithvikbng@gmail.com",
 		logo: "../logo.png",
 	},
 
 	socials: {
 		twitter: "https://x.com/BngRithvik",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
+		github: "https://github.com/Rithvik1709",
+		linkedin: "https://www.linkedin.com/in/rithvik1709/",
+		stackoverflow: "https://stackoverflow.com/users/26624236/rithvik-k",
 		facebook: "https://facebook.com/",
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "ML and Blockchain Developer",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"I’m Rithvik, a passionate developer and AI enthusiast with hands-on experience in Python, ML, blockchain, and full-stack web development. I love building innovative projects, from AI-powered medical bots and IoT solutions to decentralized platforms and AR learning apps, I enjoy solving complex problems",
 	},
 
 	about: {
