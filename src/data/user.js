@@ -34,49 +34,68 @@ const INFO = {
 	},
 
 	projects: [
+	
 		{
-			title: "Project 1",
+			title: "Documed - AI-Powered Medical Chatbot",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"A chatbot that leverages AI to provide medical information and support to users.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/rithvik17-09/documed",
 		},
 
 		{
-			title: "Project 2",
+			title: "Local Voice Assistant",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"A voice assistant designed for low-resource languages, It uses AI to offer offline functionality for tasks like setting reminders, translating phrases, or searching local information.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "View Project",
+			link: "https://github.com/Rithvik1709/Local-voice-assistant",
+		},
+
+		{
+			title: "Stacked Image",
+			description:
+				"A Python script that converts a set of images into a single stacked image, arranging them in a grid format for easy viewing and sharing. This is useful for predicting stars in astronomy.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "View Project",
+			link: "https://github.com/Rithvik1709/stacked_image",
+		},
+
+		{
+			title: "Audio and Image compression using Flask",
+			description:
+				"This project implements audio and image compression techniques using Flask, allowing users to upload files and receive compressed versions in return.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/Rithvik1709/audio-and-image-compression-using-flask",
 		},
 
 		{
-			title: "Project 3",
+			title: "Fake Product Identification using Blockchain",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"A blockchain-based system for verifying the authenticity of products, helping to combat counterfeiting and ensure consumer trust.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/Rithvik1709/Fake-product-identification",
 		},
 
 		{
-			title: "Project 4",
+			title: "Arduino + Blockchain based Voting System",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"A secure voting system that combines Arduino hardware with blockchain technology to ensure transparency and integrity in the voting process.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/Rithvik1709/Smart-voting-system-with-Arduino-blockchain",
 		},
 
 		{
-			title: "Project 5",
+			title: "Web-3 Job-Portal",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"A decentralized job portal built on blockchain technology, providing a secure and transparent platform for job seekers and employers to connect.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/Rithvik1709/Web3-job-portal",
 		},
 	],
 };
