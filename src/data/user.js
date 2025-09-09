@@ -12,6 +12,7 @@ const INFO = {
 		linkedin: "https://www.linkedin.com/in/rithvik1709/",
 		stackoverflow: "https://stackoverflow.com/users/26624236/rithvik-k",
 		facebook: "https://facebook.com/",
+		medium: "https://medium.com/@rithvikbng",
 	},
 
 	homepage: {

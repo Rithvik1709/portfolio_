@@ -7,8 +7,10 @@ import {
 	faTwitter,
 	faGithub,
 	faStackOverflow,
-	faInstagram,
+	faLinkedin,
+	faMedium
 } from "@fortawesome/free-brands-svg-icons";
+
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -133,6 +135,16 @@ const Homepage = () => {
 									icon={faGithub}
 									className="homepage-social-icon"
 								/>
+							</a>							
+							<a
+								href={INFO.socials.linkedin}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FontAwesomeIcon
+									icon={faLinkedin}
+									className="homepage-social-icon"
+								/>
 							</a>
 							<a
 								href={INFO.socials.stackoverflow}
@@ -141,6 +153,16 @@ const Homepage = () => {
 							>
 								<FontAwesomeIcon
 									icon={faStackOverflow}
+									className="homepage-social-icon"
+								/>
+							</a>
+							<a
+								href={INFO.socials.medium}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FontAwesomeIcon
+									icon={faMedium}
 									className="homepage-social-icon"
 								/>
 							</a>
