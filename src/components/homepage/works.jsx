@@ -79,7 +79,7 @@ const Works = () => {
 								alt="Headstarter Ai"
 								className="work-image"
 							/>
-							<div className="work-title">Headstarter Ai</div>
+							<div className="work-title">Headstarter AI</div>
 							<div className="work-subtitle">
 								Software Engineer Intern
 							</div>
