@@ -17,8 +17,8 @@
 }
 
 .nav-background {
-	width: 600px;
-	height: 40px;
+	width: 800px;
+	height: 48px;
 	padding-left: 0%;
 	padding-right: 0%;
 	background: #fff;
@@ -40,8 +40,9 @@
 
 .nav-item {
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 95%;
 	position: relative; /* needed for dropdown */
+	white-space: nowrap;
 }
 
 .nav-item.active a {

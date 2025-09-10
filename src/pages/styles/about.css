@@ -1,3 +1,9 @@
+.section-underline {
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 2px;
+	text-decoration-color: #02b875;
+}
 .about-logo-container {
 	display: flex;
 	justify-content: left;
@@ -21,8 +27,40 @@
 	padding-top: 120px;
 }
 
+
 .about-main {
 	display: flex;
+}
+
+
+.open-source-section,
+.tech-summits-section {
+	width: 100%;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	padding: 24px 0;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	background: transparent;
+	transition: background 0.2s;
+}
+
+.open-source-section:hover,
+.tech-summits-section:hover {
+	background: #f8f9fa;
+}
+
+.open-source-section h2,
+.tech-summits-section h2 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	color: #222;
+}
+
+.open-source-section p,
+.tech-summits-section p {
+	margin: 0;
+	color: #444;
 }
 
 .about-right-side {

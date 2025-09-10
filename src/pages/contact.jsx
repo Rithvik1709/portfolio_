@@ -51,6 +51,7 @@ const Contact = () => {
 							&nbsp; and also connect with me on Social Networks.
 
 						</div>
+
 					</div>
 
 					<div className="socials-container">

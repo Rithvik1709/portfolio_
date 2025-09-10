@@ -12,9 +12,9 @@ const Footer = () => {
 						<li className="footer-nav-link-item">
 							<Link to="/">Home</Link>
 						</li>
-						<li className="footer-nav-link-item">
-							<Link to="/about">About</Link>
-						</li>
+											<li className="footer-nav-link-item">
+												<Link to="/about">Open Source & Tech Community</Link>
+											</li>
 						<li className="footer-nav-link-item">
 							<Link to="/projects">Projects</Link>
 						</li>
@@ -28,9 +28,10 @@ const Footer = () => {
 				</div>
 
 				<div className="footer-credits">
-					<div className="footer-credits-text">
-						© 2025 Made by Rithvik. All Rights Reserved.
-					</div>
+									<div className="footer-credits-text">
+										© 2025 Made by Rithvik. All Rights Reserved.<br />
+										<span style={{fontSize: '85%', color: '#888'}}>Proudly supporting the open source & tech community.</span>
+									</div>
 				</div>
 			</div>
 		</React.Fragment>
