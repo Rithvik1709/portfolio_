@@ -63,6 +63,7 @@
 }
 
 /* Dropdown styles */
+
 .dropdown-menu {
 	position: absolute;
 	top: 120%;
@@ -74,8 +75,17 @@
 	padding: 6px 0;
 	margin: 0;
 	min-width: 180px;
-	display: none; /* hidden by default */
 	z-index: 1000;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown:focus-within .dropdown-menu {
+	display: block;
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
