@@ -42,3 +42,39 @@
 	text-align: right;
 	color: var(--tertiary-color);
 }
+
+@media (max-width: 600px) {
+	.work {
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100% !important;
+		padding-bottom: 24px;
+		position: relative;
+	}
+	.work-image {
+		width: 40px;
+		height: 40px;
+		margin-bottom: 8px;
+		outline-width: 3px;
+	}
+	.work-title {
+		padding-left: 0;
+		margin-top: 0;
+		font-size: 16px;
+		width: 100%;
+	}
+	.work-subtitle {
+		position: static;
+		padding: 4px 0 0 0;
+		font-size: 13px;
+		width: 100%;
+	}
+	.work-duration {
+		position: static;
+		width: 100%;
+		padding: 2px 0 0 0;
+		text-align: left;
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+}
