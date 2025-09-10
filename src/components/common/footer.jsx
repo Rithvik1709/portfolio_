@@ -30,7 +30,7 @@ const Footer = () => {
 				<div className="footer-credits">
 									<div className="footer-credits-text">
 										© 2025 Made by Rithvik. All Rights Reserved.<br />
-										<span style={{fontSize: '85%', color: '#888'}}>Proudly supporting the open source & tech community.</span>
+										<span style={{fontSize: '85%', color: '#888'}}></span>
 									</div>
 				</div>
 			</div>
