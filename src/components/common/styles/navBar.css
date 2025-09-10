@@ -125,4 +125,22 @@
 	.nav-item {
 		font-weight: bold;
 	}
+
+	/* Enable horizontal scroll for nav-list on mobile */
+	.nav-list {
+		overflow-x: auto;
+		white-space: nowrap;
+		flex-wrap: nowrap;
+		-webkit-overflow-scrolling: touch;
+		max-width: 100vw;
+		gap: 16px;
+		scrollbar-width: thin;
+	}
+	.nav-item {
+		min-width: max-content;
+	}
+	/* Hide scrollbar for nav-list on mobile for cleaner look */
+	.nav-list::-webkit-scrollbar {
+		display: none;
+	}
 }
