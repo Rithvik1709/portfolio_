@@ -56,39 +56,39 @@ const About = () => {
 																			<h2 className="section-underline">Open Source Contributions & Mentorship</h2>
 																			<div>
 																				<h3>GSSOC'24 CONTRIBUTOR</h3>
-																				<p>Contributed to the Reactfolio open source project by adding new features and fixing bugs. Helped improve documentation and onboard new contributors.</p>
+																				<p>Contributed to open-source projects under GirlScript Summer of Code (GSSOC) by fixing issues, adding features, and collaborating with the developer community.</p>
 																			</div>
 																			<div>
 																				<h3>GSSOC'25 MENTOR</h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Started as a Contributor at GirlScript Summer of Code (GSSOC), working on open-source projects through issue resolution and feature development, and later promoted to Mentor, guiding contributors, reviewing code, and supporting their learning journey.</p>
 																			</div>
 																			<div>
 																				<h3>Google Cloud Arcade Facilitator'24 & 25</h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Served as Google Cloud Arcade Facilitator, guiding students through cloud labs, resolving queries, and encouraging hands-on learning with Google Cloud technologies.</p>
 																			</div>
 																			<div>
 																				<h3>Winter of Blockchain(WOB) MENTOR</h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Mentor at Winter of Blockchain, guiding contributors in blockchain development, reviewing projects, and fostering learning in decentralized technologies.</p>
 																			</div>
 																			<div>
 																				<h3>Unstop Campus Ambassador</h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Campus Ambassador at Unstop, promoted hackathons and competitions, increased student engagement, and built awareness about career opportunities.</p>
 																			</div>	
 																			<div>
 																				<h3>LetsUpgrade - Student Ambassador</h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Student Ambassador at LetsUpgrade, facilitated workshops, and helped peers enhance their coding skills through collaborative learning.</p>
 																			</div>
 																			<div>
 																				<h3>International Model United Nation- Student Ambassador</h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Student Ambassador at International Model United Nations, promoted global awareness and encouraged youth participation in diplomacy and international relations.</p>
 																			</div>
 																			<div>
 																				<h3>Agnirva Space Community(By ISRO) -Campus Ambassador </h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Campus Ambassador at Agnirva Space Community, organized events and workshops to promote space education and awareness among students.</p>
 																			</div>
 																			<div>
 																				<h3>Mentor - Mentor Together </h3>
-																				<p>Submitted several pull requests to enhance performance and add new utilities to the Awesome JS Library.</p>
+																				<p>Mentor at Mentor Together, guided students in their learning journeys, providing support and resources for their development.</p>
 																			</div>
 																		</div>
 
