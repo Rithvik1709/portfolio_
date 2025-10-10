@@ -1,7 +1,7 @@
 .terminal-wrapper {
 	padding: 24px 16px;
-	/* move terminal further down from the top/nav */
-	margin-top: 80px;
+	/* move terminal further down from the top/nav to avoid overlap with fixed navbar */
+	margin-top: 160px;
 }
 
 .terminal-window {
@@ -70,5 +70,6 @@
 
 /* slightly smaller offset on narrow screens */
 @media (max-width: 420px) {
-	.terminal-wrapper { margin-top: 48px; }
+	/* smaller but still larger offset on narrow screens */
+	.terminal-wrapper { margin-top: 80px; }
 }
