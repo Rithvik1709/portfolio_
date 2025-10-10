@@ -28,6 +28,9 @@ const NavBar = (props) => {
 							<li className={active === "contact" ? "nav-item active" : "nav-item"}>
 								<Link to="/contact">Contact</Link>
 							</li>
+							<li className={active === "terminal" ? "nav-item active" : "nav-item"}>
+								<Link to="/terminal">Terminal</Link>
+							</li>
 
 											<li className="nav-item">
 												<a className="nav-link" href="/resumes/rithvik_s_resume (2).pdf" download>Download my Resume</a>

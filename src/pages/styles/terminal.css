@@ -1,0 +1,74 @@
+.terminal-wrapper {
+	padding: 24px 16px;
+	/* move terminal further down from the top/nav */
+	margin-top: 80px;
+}
+
+.terminal-window {
+	background: #0b0f12;
+	color: #e6eef3;
+	border-radius: 8px;
+	padding: 16px;
+	min-height: 60vh;
+	box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+	font-family: 'Source Code Pro', monospace;
+}
+
+.terminal-output {
+	max-height: 60vh;
+	overflow-y: auto;
+	padding-bottom: 8px;
+}
+
+.terminal-line {
+	margin: 6px 0;
+}
+
+.terminal-line .prompt {
+	color: #7dd3fc;
+	margin-right: 8px;
+}
+
+.terminal-line.system pre {
+	white-space: pre-wrap;
+	margin: 0;
+}
+
+.terminal-line.user pre {
+	white-space: pre-wrap;
+	margin: 0;
+	color: #c7f9cc;
+}
+
+.terminal-input {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+.terminal-input input {
+	flex: 1;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #e6eef3;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 14px;
+}
+
+/* mobile adjustments */
+@media (max-width: 600px) {
+	.terminal-window {
+		padding: 12px;
+		min-height: 50vh;
+	}
+	.terminal-output {
+		max-height: 50vh;
+	}
+}
+
+/* slightly smaller offset on narrow screens */
+@media (max-width: 420px) {
+	.terminal-wrapper { margin-top: 48px; }
+}
