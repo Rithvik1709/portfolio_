@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import NavBar from "../components/common/navBar";
 import INFO from "../data/user";
+import myArticles from "../data/articles";
 import "./styles/terminal.css";
 
 
@@ -68,7 +69,20 @@ const Terminal = () => {
 	const handleCommand = (cmd) => {
 		const c = cmd.trim().toLowerCase();
 		if (c === "help") {
-			append("Available commands: help, about, socials, projects, contact, resume, clear", "system");
+			append("Available commands: help, about, socials, projects, articles, contact, resume, clear", "system");
+		} else if (c === "articles") {
+			// list articles with titles and links
+			const list = myArticles
+				.map((a, idx) => {
+					try {
+						const obj = a();
+						return `- ${obj.title} (${obj.date}) : ${obj.link}`;
+					} catch (err) {
+						return `- article ${idx + 1}`;
+					}
+				})
+				.join("\n");
+			append(list || "No articles found.", "system");
 		} else if (c === "about") {
 			append(INFO.homepage.description, "system");
 		} else if (c === "socials") {
