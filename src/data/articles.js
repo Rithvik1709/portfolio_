@@ -127,6 +127,90 @@ function article_7() {
 }
 
 
-const myArticles = [article_1, article_2, article_3, article_4, article_5, article_6, article_7];
+function article_8() {
+	return {
+		date: "14 Sep 2025",
+		title: "Using Dodos Adapter to Handle Payments in Your AI SaaS",
+		description: "A practical guide to integrating Dodos Adapter for seamless payment processing in AI SaaS platforms. Covers setup, workflow, and best practices for secure transactions.",
+		keywords: ["Payments", "AI SaaS", "Dodos Adapter", "Integration"],
+		link: "https://medium.com/@rithvikbng/using-dodos-adapter-to-handle-payments-in-your-ai-saas-471ba1846aea",
+		style: ``,
+		body: (
+			<React.Fragment>
+				<div className="article-content">
+					<div className="paragraph">Learn how to integrate Dodos Adapter for payment handling in your AI SaaS product, including step-by-step setup and security tips.</div>
+				</div>
+			</React.Fragment>
+		),
+	};
+}
+
+function article_9() {
+	return {
+		date: "23 Oct 2025",
+		title: "Deploying a Production-Ready RAG on Kubernetes: Multi-Tenant Qdrant, Streaming PDF Ingestion, LLM",
+		description: "A comprehensive guide to deploying Retrieval-Augmented Generation (RAG) systems on Kubernetes, featuring multi-tenant Qdrant, streaming PDF ingestion, and LLM integration for scalable enterprise AI.",
+		keywords: ["RAG", "Kubernetes", "Qdrant", "LLM", "PDF Ingestion", "Multi-Tenant"],
+		link: "https://medium.com/@rithvikbng/deploying-a-production-ready-rag-on-kubernetes-multi-tenant-qdrant-streaming-pdf-ingestion-llm-82356f315f1b",
+		style: ``,
+		body: (
+			<React.Fragment>
+				<div className="article-content">
+					<div className="paragraph">This article walks through deploying a scalable RAG system on Kubernetes, including multi-tenant Qdrant setup, streaming PDF ingestion, and LLM orchestration for production AI workloads.</div>
+				</div>
+			</React.Fragment>
+		),
+	};
+}
+
+function article_10() {
+	return {
+		date: "29 Oct 2025",
+		title: "Automating App Localization with Lingo Dev: The Developer’s Guide to Seamless CI/CD Integration",
+		description: "A developer’s guide to automating app localization using Lingo Dev, with practical steps for integrating seamless CI/CD workflows and improving global reach.",
+		keywords: ["Localization", "Lingo Dev", "CI/CD", "Automation", "App Development"],
+		link: "https://medium.com/@rithvikbng/automating-app-localization-with-lingo-dev-the-developers-guide-to-seamless-ci-cd-integration-46a167fc5428",
+		style: ``,
+		body: (
+			<React.Fragment>
+				<div className="article-content">
+					<div className="paragraph">Discover how to automate localization for your apps using Lingo Dev, including step-by-step CI/CD integration for efficient global deployment.</div>
+				</div>
+			</React.Fragment>
+		),
+	};
+}
+
+function article_11() {
+	return {
+		date: "06 Nov 2025",
+		title: "Building a Multimodal Fusion Search Engine with Qdrant, CLIP, Whisper: Text, Image, and Audio in One",
+		description: "A technical walkthrough for building a multimodal search engine using Qdrant, CLIP, and Whisper, enabling unified search across text, image, and audio data.",
+		keywords: ["Multimodal", "Search Engine", "Qdrant", "CLIP", "Whisper", "Text", "Image", "Audio"],
+		link: "https://medium.com/@rithvikbng/building-a-multimodal-fusion-search-engine-with-qdrant-clip-whisper-text-image-and-audio-in-ec0cb6996e17",
+		style: ``,
+		body: (
+			<React.Fragment>
+				<div className="article-content">
+					<div className="paragraph">Explore how to build a fusion search engine that combines text, image, and audio search using Qdrant, CLIP, and Whisper for advanced multimodal retrieval.</div>
+				</div>
+			</React.Fragment>
+		),
+	};
+}
+
+const myArticles = [
+	article_11, // 06 Nov 2025
+	article_10, // 29 Oct 2025
+	article_9,  // 23 Oct 2025
+	article_8,  // 14 Sep 2025
+	article_1,  // 05 Sep 2025
+	article_2,  // 11 Jun 2025
+	article_3,  // 09 Jan 2025
+	article_4,  // 23 Dec 2024
+	article_5,  // 22 Dec 2024
+	article_6,  // 04 Dec 2024
+	article_7,  // 30 Nov 2024
+];
 
 export default myArticles;
