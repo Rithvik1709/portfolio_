@@ -1,7 +1,7 @@
 .terminal-wrapper {
 	padding: 24px 16px;
-	/* move terminal further down from the top/nav to avoid overlap with fixed navbar */
-	margin-top: 160px;
+	/* move terminal further down from the top/nav */
+	margin-top: 120px;
 }
 
 .terminal-window {
@@ -57,7 +57,7 @@
 	font-size: 14px;
 }
 
-/* mobile adjustments */
+
 @media (max-width: 600px) {
 	.terminal-window {
 		padding: 12px;
@@ -68,8 +68,7 @@
 	}
 }
 
-/* slightly smaller offset on narrow screens */
+
 @media (max-width: 420px) {
-	/* smaller but still larger offset on narrow screens */
-	.terminal-wrapper { margin-top: 80px; }
+	.terminal-wrapper { margin-top: 64px; }
 }

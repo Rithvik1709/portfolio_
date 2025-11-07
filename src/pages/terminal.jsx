@@ -6,14 +6,14 @@ import "./styles/terminal.css";
 
 
 const Terminal = () => {
-	// collapse multiple whitespace (spaces, tabs, newlines) in the stored name
+	
 	const displayName = (INFO.main.name || "").replace(/\s+/g, " ").trim();
 	const [lines, setLines] = useState([
 		{ type: "system", text: `Welcome to ${displayName}'s terminal. Type 'help' for commands.` },
 	]);
-	// command history for ArrowUp / ArrowDown navigation
+	
 	const [history, setHistory] = useState([]);
-	const [historyIndex, setHistoryIndex] = useState(null); // null means not browsing history
+	const [historyIndex, setHistoryIndex] = useState(null); 
 	const [input, setInput] = useState("");
 	const inputRef = useRef(null);
     const outputRef = useRef(null);
@@ -25,7 +25,7 @@ const Terminal = () => {
 	const append = (text, type = "user") => {
 		setLines((l) => {
 			const next = [...l, { type, text }];
-			// scroll to bottom after the DOM updates
+			
 			setTimeout(() => {
 				if (outputRef.current) {
 					outputRef.current.scrollTop = outputRef.current.scrollHeight;
@@ -35,7 +35,7 @@ const Terminal = () => {
 		});
 	};
 
-	// render text but convert URLs to clickable links
+
 	const renderTextWithLinks = (text) => {
 		if (!text || typeof text !== "string") return text;
 		const urlRegex = /https?:\/\/[^\s)]+/g;
@@ -61,7 +61,7 @@ const Terminal = () => {
 		if (lastIndex < text.length) {
 			elements.push(<span key={`txt-${keyId++}`}>{text.slice(lastIndex)}</span>);
 		}
-		// if no urls matched, return original text inside a span so <pre> preserves whitespace
+		
 		if (elements.length === 0) return <span>{text}</span>;
 		return elements;
 	};
@@ -71,7 +71,7 @@ const Terminal = () => {
 		if (c === "help") {
 			append("Available commands: help, about, socials, projects, articles, contact, resume, clear", "system");
 		} else if (c === "articles") {
-			// list articles with titles and links
+			
 			const list = myArticles
 				.map((a, idx) => {
 					try {
@@ -106,12 +106,12 @@ const Terminal = () => {
 		if (!input) return;
 		append(input, "user");
 		handleCommand(input);
-		// push to history and reset browsing index
+
 		setHistory((h) => [...h, input]);
 		setHistoryIndex(null);
 		setInput("");
 
-		// after DOM updates, scroll the output to bottom so the user sees the latest response
+		
 		setTimeout(() => {
 			if (outputRef.current) {
 				outputRef.current.scrollTop = outputRef.current.scrollHeight;
@@ -123,7 +123,7 @@ const Terminal = () => {
 		if (e.key === "ArrowUp") {
 			e.preventDefault();
 			if (history.length === 0) return;
-			// start from last command if not browsing
+			
 			let idx = historyIndex === null ? history.length - 1 : historyIndex - 1;
 			if (idx < 0) idx = 0;
 			setHistoryIndex(idx);
@@ -131,7 +131,7 @@ const Terminal = () => {
 		} else if (e.key === "ArrowDown") {
 			e.preventDefault();
 			if (history.length === 0) return;
-			if (historyIndex === null) return; // nothing to go down from
+			if (historyIndex === null) return; 
 			let idx = historyIndex + 1;
 			if (idx >= history.length) {
 				setHistoryIndex(null);
