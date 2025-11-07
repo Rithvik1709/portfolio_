@@ -97,6 +97,30 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://github.com/Rithvik1709/Web3-job-portal",
 		},
+        {
+            title: "Blockcode",
+            description:
+                "A collaborative code editor and learning platform. Supports real-time editing, sharing, and interactive coding sessions for students and educators.",
+            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+            linkText: "View Project",
+            link: "https://github.com/Rithvik1709/Blockcode",
+        },
+			{
+				title: "Sora Reworked",
+				description:
+					"A reimagined version of Sora, featuring advanced AI capabilities for text, image, and code generation. Built for seamless integration and creative workflows.",
+				logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				linkText: "View Project",
+				link: "https://github.com/Rithvik1709/Sora_reworked",
+			},
+	        {
+	            title: "Applyperfect",
+	            description:
+	                "A platform to streamline job applications, resume building, and interview preparation. Designed to help users land their dream jobs efficiently.",
+	            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+	            linkText: "View Project",
+	            link: "https://github.com/Rithvik1709/Applyperfect",
+	        },
 	],
 };
 
