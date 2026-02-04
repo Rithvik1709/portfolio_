@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import "./styles/navBar.css";
 
 const NavBar = (props) => {
 	const { active } = props;
-	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 	return (
 		<React.Fragment>
