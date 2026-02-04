@@ -35,7 +35,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Project Mentor
 							</div>
-							<div className="work-duration">Jul 2025 - Present</div>
+							<div className="work-duration">Jul 2025 - Dec 2025</div>
 						</div>
 						<div className="work">
 							<img
@@ -47,7 +47,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Technical Team Lead
 							</div>
-							<div className="work-duration">Dec 2023 - Present</div>
+							<div className="work-duration">Dec 2023 - Dec 2025</div>
 						</div>
 						<div className="work">
 							<img
@@ -59,7 +59,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Beta MLSA
 							</div>
-							<div className="work-duration">Aug 2024 - Present</div>
+							<div className="work-duration">Aug 2024 - Dec 2025</div>
 						</div>
 						<div className="work">
 							<img
@@ -71,7 +71,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Pie & AI Ambassador
 							</div>
-							<div className="work-duration">Sep 2024 - Present</div>
+							<div className="work-duration">Sep 2024 - Sep 2025</div>
 						</div>
 						<div className="work">
 							<img
