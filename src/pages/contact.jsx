@@ -1,71 +1,85 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import NavBar from "../components/common/navBar";
-import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
-import Socials from "../components/about/socials";
+import Layout from "../components/layout/layout";
+import { Row, Arrow } from "../components/lists";
 
 import INFO from "../data/user";
-import SEO from "../data/seo";
 
-import "./styles/contact.css";
+import "./styles/pages.css";
+
+const ELSEWHERE = [
+	["GitHub", INFO.socials.github, "Rithvik1709"],
+	["LinkedIn", INFO.socials.linkedin, "rithvik1709"],
+	["Medium", INFO.socials.medium, "@rithvikbng"],
+	["X", INFO.socials.twitter, "@BngRithvik"],
+	["Stack Overflow", INFO.socials.stackoverflow, "rithvik-k"],
+];
 
 const Contact = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	const [copied, setCopied] = useState(false);
 
-	const currentSEO = SEO.find((item) => item.page === "contact");
+	const copyEmail = async () => {
+		try {
+			await navigator.clipboard.writeText(INFO.main.email);
+			setCopied(true);
+			setTimeout(() => setCopied(false), 1800);
+		} catch (e) {
+			window.location.href = `mailto:${INFO.main.email}`;
+		}
+	};
 
 	return (
-		<React.Fragment>
-			<Helmet>
-				<title>{`Contact | ${INFO.main.title}`}</title>
-				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
-			</Helmet>
+		<Layout active="contact" title="Contact" seoPage="contact">
+			<header className="page-head">
+				<h1>Contact</h1>
+				<p>
+					Questions, feedback, a project you'd like a hand with, or an invite to speak. Email is the
+					fastest way to reach me.
+				</p>
+			</header>
 
-			<div className="page-content">
-				<NavBar active="contact" />
-				<div className="content-wrapper">
-					<div className="contact-logo-container">
-						<div className="contact-logo">
-							<Logo width={46} />
-						</div>
-					</div>
-
-					<div className="contact-container">
-						<div className="title contact-title">
-							Connect with Me
-						</div>
-
-						<div className="subtitle contact-subtitle">
-							Hey there! 👋 Thanks for stopping by. I love hearing from people, whether it’s feedback, questions, or ideas. You can mail me at							&nbsp;{" "}
-							<a href={`mailto:${INFO.main.email}`}>
-								{INFO.main.email}
-							</a>
-							&nbsp; and also connect with me on Social Networks.
-
-						</div>
-
-					</div>
-
-					<div className="socials-container">
-						<div className="contact-socials">
-							<Socials />
-						</div>
-					</div>
-
-					<div className="page-footer">
-						<Footer />
-					</div>
+			<Row label="Email">
+				<div className="email-line">
+					<a className="email" href={`mailto:${INFO.main.email}`}>
+						{INFO.main.email}
+					</a>
+					<button className="copy" onClick={copyEmail} aria-live="polite">
+						{copied ? "Copied" : "Copy"}
+					</button>
 				</div>
-			</div>
-		</React.Fragment>
+			</Row>
+
+			<Row label="Elsewhere">
+				<ul className="list">
+					{ELSEWHERE.map(([label, href, handle]) => (
+						<li key={label}>
+							<a href={href} target="_blank" rel="noreferrer" className="item item-social">
+								<span className="item-title">
+									{label}
+									<Arrow />
+								</span>
+								<span className="item-date mono">{handle}</span>
+							</a>
+						</li>
+					))}
+				</ul>
+			</Row>
+
+			<Row label="Other">
+				<p className="muted">
+					My{" "}
+					<a className="link" href={INFO.main.resume} download>
+						résumé
+					</a>{" "}
+					is a PDF. If you'd rather type than click, there's a{" "}
+					<Link className="link" to="/terminal">
+						terminal
+					</Link>
+					.
+				</p>
+			</Row>
+		</Layout>
 	);
 };
 

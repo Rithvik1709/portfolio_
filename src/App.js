@@ -12,9 +12,11 @@ import Notfound from "./pages/404";
 import Terminal from "./pages/terminal";
 
 import { TRACKING_ID } from "./data/tracking";
-import "./app.css";
+import { useLinkTransitions } from "./transitions";
 
 function App() {
+	useLinkTransitions();
+
 	useEffect(() => {
 		if (TRACKING_ID !== "") {
 			ReactGA.initialize(TRACKING_ID);

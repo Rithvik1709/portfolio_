@@ -1,0 +1,24 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+	padding-top: 28px;
+	padding-bottom: 40px;
+	font-size: 13px;
+	color: var(--text-faint);
+}
+
+.footer nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 18px;
+}
+
+.footer a {
+	transition: color 0.2s;
+}
+
+.footer a:hover {
+	color: var(--text);
+}

@@ -1,0 +1,151 @@
+.row-label h2 {
+	font-family: var(--font-sans);
+	font-size: 13px;
+	font-weight: 400;
+	color: var(--text-faint);
+}
+
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.item {
+	position: relative;
+	display: grid;
+	gap: 4px;
+	padding: 14px 0;
+	border-bottom: 1px solid var(--rule);
+	isolation: isolate;
+}
+
+.list li:first-child .item,
+.list li.item:first-child {
+	padding-top: 0;
+}
+
+.list li:last-child .item,
+.list li.item:last-child {
+	border-bottom: 0;
+}
+
+/* Hover: a soft band behind the row, extending into the gutter */
+a.item::before {
+	content: "";
+	position: absolute;
+	inset: 0 -12px;
+	z-index: -1;
+	border-radius: 6px;
+	background: var(--highlight);
+	opacity: 0;
+	transition: opacity 0.2s var(--ease);
+}
+
+.list li:first-child a.item::before {
+	top: -10px;
+}
+
+a.item:hover::before {
+	opacity: 1;
+}
+
+.item-title {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 6px;
+	font-weight: 500;
+	color: var(--text);
+}
+
+.item .arrow {
+	flex-shrink: 0;
+	color: var(--text-faint);
+	opacity: 0;
+	transform: translate(-3px, 3px);
+	transition: opacity 0.2s var(--ease), transform 0.2s var(--ease), color 0.2s;
+}
+
+a.item:hover .arrow {
+	opacity: 1;
+	transform: none;
+	color: var(--accent);
+}
+
+.item-desc {
+	display: block;
+	color: var(--text-muted);
+}
+
+.item-meta {
+	color: var(--text-faint);
+	margin-top: 2px;
+}
+
+.item-date {
+	color: var(--text-faint);
+	white-space: nowrap;
+}
+
+.item-pub {
+	display: block;
+	font-size: 13px;
+	color: var(--text-faint);
+}
+
+/* Writing: date column + title */
+.item-writing {
+	grid-template-columns: 76px 1fr;
+	gap: 16px;
+	align-items: baseline;
+}
+
+/* Experience: logo + role/company + dates */
+.item-job {
+	grid-template-columns: 28px 1fr auto;
+	gap: 14px;
+	align-items: center;
+}
+
+.item-logo {
+	width: 28px;
+	height: 28px;
+	border-radius: 6px;
+	object-fit: cover;
+	background: #fff;
+	box-shadow: 0 0 0 1px var(--rule);
+	filter: grayscale(1);
+	opacity: 0.85;
+	transition: filter 0.3s, opacity 0.3s;
+}
+
+.item-job:hover .item-logo {
+	filter: none;
+	opacity: 1;
+}
+
+.item-job .item-desc {
+	font-size: 14px;
+}
+
+@media (max-width: 560px) {
+	.item-writing {
+		grid-template-columns: 1fr;
+		gap: 2px;
+	}
+	.item-job {
+		grid-template-columns: 28px 1fr;
+	}
+	.item-job .item-date {
+		grid-column: 2;
+		margin-top: -8px;
+	}
+	a.item::before {
+		inset: 0 -8px;
+	}
+}
+
+.item-summary {
+	margin-top: 6px;
+	font-size: 14.5px;
+}

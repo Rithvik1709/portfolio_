@@ -1,0 +1,119 @@
+[
+	{
+		"date": "29 Sep 2026",
+		"title": "Large World Models(LWM): Teaching AI to Imagine the World",
+		"description": "What LWMs are, how they work under the hood, who’s building them in 2026, and why your production stack still runs on LLMs",
+		"keywords": [
+			"Machine Learning",
+			"LLM",
+			"LWM",
+			"AI"
+		],
+		"link": "https://tutorialsavvy.com/large-world-models-lwm-teaching-ai-to-imagine-the-world-1f1e6a73091a",
+		"publication": "TutorialSavvy"
+	},
+	{
+		"date": "29 Sep 2026",
+		"title": "Why LLMs Hallucinate (and What Actually Helps)",
+		"description": "Why a model makes things up, what’s going on inside it, and which fixes are worth your engineering time.",
+		"keywords": [
+			"Transformers",
+			"Machine Learning",
+			"RAG",
+			"AI"
+		],
+		"link": "https://tutorialsavvy.com/why-llms-hallucinate-and-what-actually-helps-01f5267375ac",
+		"publication": "TutorialSavvy"
+	},
+	{
+		"date": "23 Sep 2026",
+		"title": "Cacheup: A Multi-Tiered Cache in Front of Claude, So You Stop Paying for Work You’ve Already Done",
+		"description": "You would have noticed this in claude the same questions get asked twice, the same system prompt gets sent on every single call, and the same large files get read into context over and over just so the model can tell…",
+		"keywords": [
+			"Machine Learning",
+			"ChatGPT",
+			"Generative AI",
+			"AI"
+		],
+		"link": "https://tutorialsavvy.com/cacheup-a-multi-tiered-cache-in-front-of-claude-so-you-stop-paying-for-work-youve-already-done-b27b109a5bab",
+		"publication": "TutorialSavvy"
+	},
+	{
+		"date": "19 Sep 2026",
+		"title": "Jev: Teaching Software to Make Small Decisions Without Calling in a Language Model",
+		"description": "Stop Sending Every Tiny Decision to an LLM",
+		"keywords": [
+			"LLM",
+			"Jevs",
+			"Machine Learning",
+			"AI"
+		],
+		"link": "https://medium.com/data-science-collective/jev-teaching-software-to-make-small-decisions-without-calling-in-a-language-model-bbfc25bad214",
+		"publication": "Data Science Collective"
+	},
+	{
+		"date": "16 Aug 2026",
+		"title": "Launching Vaani v1.0.0: An Open-Source Real-Time Voice AI Stack",
+		"description": "A low-latency voice pipeline for local inference, streaming speech recognition, LLM reasoning, and text-to-speech synthesis.",
+		"keywords": [],
+		"link": "https://medium.com/@rithvikbng/launching-vaani-v1-0-0-an-open-source-real-time-voice-ai-stack-28ed637e6fa2"
+	},
+	{
+		"date": "21 Jun 2026",
+		"title": "Harness Layer: Building the Intelligence Infrastructure Behind Modern AI Systems",
+		"description": "The AI industry is obsessed with models.Every week a new model is released. Bigger context windows. Better reasoning. Faster inference. Lower costs.",
+		"keywords": [
+			"AI",
+			"Machine Learning",
+			"Orchestration"
+		],
+		"link": "https://medium.com/@rithvikbng/harness-layer-building-the-intelligence-infrastructure-behind-modern-ai-systems-ef60e5d4c3ad"
+	},
+	{
+		"date": "31 May 2026",
+		"title": "Representation Learning: The Hidden Language of Modern AI",
+		"description": "How ChatGPT understands language, how Netflix recommends movies, how search engines find the right results, and how modern AI learns without explicit instructions.",
+		"keywords": [
+			"Reinforcement Learning",
+			"AI Agents",
+			"Deep Learning",
+			"Machine Learning"
+		],
+		"link": "https://medium.com/@rithvikbng/representation-learning-the-hidden-language-of-modern-ai-c8daa1ee0308"
+	},
+	{
+		"date": "18 Feb 2026",
+		"title": "Building a Mental Health Emotion Memory System using Qdrant + ML",
+		"description": "As AI systems become more personalized, one major gap still exists: emotional memory. Most chatbots forget user emotions after a session. But what if an AI could remember emotional patterns over time and respond more…",
+		"keywords": [
+			"Qdrant",
+			"Machine Learning",
+			"Memories"
+		],
+		"link": "https://medium.com/@rithvikbng/building-a-mental-health-emotion-memory-system-using-qdrant-ml-859bd1d6cacc"
+	},
+	{
+		"date": "06 Nov 2025",
+		"title": "Building a Multimodal Fusion Search Engine with Qdrant, CLIP & Whisper: Text, Image, and Audio in One Query",
+		"description": "Search beyond words. Imagine describing an image, humming a tune, or typing a phrase and instantly retrieving relevant visuals, sounds, or documents. Multimodal fusion search where text, image, and audio all speak the…",
+		"keywords": [
+			"Machine Learning",
+			"Qdrant",
+			"Multimodal",
+			"Vector Database"
+		],
+		"link": "https://medium.com/@rithvikbng/building-a-multimodal-fusion-search-engine-with-qdrant-clip-whisper-text-image-and-audio-in-ec0cb6996e17"
+	},
+	{
+		"date": "29 Oct 2025",
+		"title": "Automating App Localization with Lingo.dev: The Developer’s Guide to Seamless CI/CD Integration",
+		"description": "“If your product speaks only one language, you’re already missing 80% of the world.”",
+		"keywords": [
+			"DevOps",
+			"CI/CD",
+			"Pipeline",
+			"Automation"
+		],
+		"link": "https://medium.com/@rithvikbng/automating-app-localization-with-lingo-dev-the-developers-guide-to-seamless-ci-cd-integration-46a167fc5428"
+	}
+]
