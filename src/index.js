@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { applyTheme, getStoredTheme } from "./theme";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+
+applyTheme(getStoredTheme());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

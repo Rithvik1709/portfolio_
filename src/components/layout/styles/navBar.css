@@ -1,0 +1,103 @@
+.nav {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	padding-top: 28px;
+	padding-bottom: 28px;
+	font-size: 14px;
+}
+
+.nav-home {
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.nav-links {
+	display: flex;
+	gap: 22px;
+	margin-left: auto;
+}
+
+.nav-links a,
+.nav-home {
+	color: var(--text-muted);
+	transition: color 0.2s;
+}
+
+.nav-home {
+	color: var(--text);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+	color: var(--text);
+}
+
+.nav-links a.active {
+	text-decoration: underline;
+	text-decoration-color: var(--rule-strong);
+	text-underline-offset: 6px;
+}
+
+.nav-tools {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.nav-tools kbd {
+	transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-tools button:hover kbd {
+	color: var(--text);
+	border-color: var(--text-faint);
+}
+
+.nav-theme {
+	display: grid;
+	place-items: center;
+	width: 22px;
+	height: 22px;
+}
+
+/* A half-filled circle: reads as "light/dark" without an icon set */
+.theme-dot {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	border: 1.5px solid var(--text-muted);
+	background: linear-gradient(90deg, var(--text-muted) 50%, transparent 50%);
+	transition: transform 0.4s var(--ease), border-color 0.2s;
+}
+
+.theme-dot.dark {
+	transform: rotate(180deg);
+}
+
+.nav-theme:hover .theme-dot {
+	border-color: var(--text);
+}
+
+@media (max-width: 720px) {
+	.nav {
+		flex-wrap: wrap;
+		gap: 10px 18px;
+		padding-top: 22px;
+		padding-bottom: 8px;
+	}
+	.nav-tools {
+		margin-left: auto;
+	}
+	.nav-tools kbd {
+		display: none;
+	}
+	.nav-links {
+		order: 3;
+		width: 100%;
+		margin-left: 0;
+		gap: 18px;
+		overflow-x: auto;
+		scrollbar-width: none;
+	}
+}

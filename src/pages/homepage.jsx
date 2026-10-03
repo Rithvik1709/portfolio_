@@ -1,219 +1,117 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
 
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Layout from "../components/layout/layout";
+import AsciiField from "../components/asciiField";
 import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faLinkedin,
-	faMedium
-} from "@fortawesome/free-brands-svg-icons";
-
-
-import Logo from "../components/common/logo";
-import Footer from "../components/common/footer";
-import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
-import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
+	Row,
+	ProjectList,
+	WritingList,
+	ExperienceList,
+} from "../components/lists";
 
 import INFO from "../data/user";
-import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
-import "./styles/homepage.css";
+import "./styles/pages.css";
 
-const Homepage = () => {
-	const [stayLogo, setStayLogo] = useState(false);
-	const [logoSize, setLogoSize] = useState(80);
-	const [oldLogoSize, setOldLogoSize] = useState(80);
-
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			let scroll = Math.round(window.pageYOffset, 2);
-
-			let newLogoSize = 80 - (scroll * 4) / 10;
-
-			if (newLogoSize < oldLogoSize) {
-				if (newLogoSize > 40) {
-					setLogoSize(newLogoSize);
-					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
-				} else {
-					setStayLogo(true);
-				}
-			} else {
-				setLogoSize(newLogoSize);
-				setStayLogo(false);
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, [logoSize, oldLogoSize]);
-
-	const currentSEO = SEO.find((item) => item.page === "home");
-
-	const logoStyle = {
-		display: "flex",
-		position: stayLogo ? "fixed" : "relative",
-		top: stayLogo ? "3vh" : "auto",
-		zIndex: 999,
-		border: stayLogo ? "1px solid white" : "none",
-		borderRadius: stayLogo ? "50%" : "none",
-		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-	};
-
-	return (
-		<React.Fragment>
-			<Helmet>
-				<title>{INFO.main.title}</title>
-				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
+const Homepage = () => (
+	<Layout active="home" seoPage="home">
+		<div className="hero">
+			<AsciiField />
+			<header className="intro">
+				<img
+					src="/homepage.jpeg"
+					alt={INFO.main.name}
+					className="intro-photo"
 				/>
-			</Helmet>
-
-			<div className="page-content">
-				<NavBar active="home" />
-				<div className="content-wrapper">
-					<div className="homepage-logo-container">
-						<div style={logoStyle}>
-							<Logo width={logoSize} link={false} />
-						</div>
-					</div>
-
-					<div className="homepage-container">
-						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.title}
-								</div>
-
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-								</div>
-							</div>
-
-							<div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpeg"
-											alt="about"
-											className="homepage-image"
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>							
-							<a
-								href={INFO.socials.linkedin}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faLinkedin}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.medium}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMedium}
-									className="homepage-social-icon"
-								/>
-							</a>
-					
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
-						</div>
-
-						<div className="homepage-projects">
-							<AllProjects />
-						</div>
-
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
-							</div>
-						</div>
-
-						<div className="page-footer">
-							<Footer />
-						</div>
-					</div>
+				<div>
+					<h1 className="intro-name">{INFO.main.name}</h1>
+					<p className="intro-role">
+						AI/ML engineer and open-source mentor
+					</p>
 				</div>
+			</header>
+
+			<div className="prose intro-text">
+				{INFO.homepage.intro.map((p) => (
+					<p key={p}>{p}</p>
+				))}
 			</div>
-		</React.Fragment>
-	);
-};
+
+			<p className="intro-links">
+				<a
+					className="link"
+					href={INFO.socials.github}
+					target="_blank"
+					rel="noreferrer"
+				>
+					GitHub
+				</a>
+				<a
+					className="link"
+					href={INFO.socials.linkedin}
+					target="_blank"
+					rel="noreferrer"
+				>
+					LinkedIn
+				</a>
+				<a
+					className="link"
+					href={INFO.socials.medium}
+					target="_blank"
+					rel="noreferrer"
+				>
+					Medium
+				</a>
+				<a className="link" href={`mailto:${INFO.main.email}`}>
+					Email
+				</a>
+				<a className="link" href={INFO.main.resume} download>
+					Résumé (PDF)
+				</a>
+			</p>
+		</div>
+
+		<Row label="Now">
+			<p className="now">{INFO.homepage.now}</p>
+		</Row>
+
+		<Row
+			label="Projects"
+			more={{ to: "/projects", label: `All ${INFO.projects.length}` }}
+		>
+			<ProjectList projects={INFO.projects.slice(0, 5)} />
+		</Row>
+
+		<Row
+			label="Writing"
+			more={{ to: "/articles", label: `All ${myArticles.length}` }}
+		>
+			<WritingList articles={myArticles.slice(0, 5)} />
+		</Row>
+
+		<Row label="Experience">
+			<ExperienceList />
+		</Row>
+
+		<Row label="Community" more={{ to: "/about", label: "More" }}>
+			<p className="muted">
+				I've mentored at GSSOC '25 and Winter of Blockchain, facilitated
+				Google Cloud Arcade in '24 and '25, and given talks at the Azure
+				Developer Community and GDG City Engineering College.
+			</p>
+		</Row>
+
+		<Row label="Contact">
+			<p className="muted">
+				The best way to reach me is{" "}
+				<a className="link" href={`mailto:${INFO.main.email}`}>
+					{INFO.main.email}
+				</a>
+				. I'm happy to talk about projects, mentoring or speaking.
+			</p>
+		</Row>
+	</Layout>
+);
 
 export default Homepage;

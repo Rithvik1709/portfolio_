@@ -4,8 +4,35 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#000000" />
-		<title>Reactfolio</title>
+		<meta name="theme-color" content="#f6f4ef" />
+		<meta
+			name="description"
+			content="Rithvik K — AI/ML engineer, open-source mentor, and technical writer building RAG systems, AI chatbots, and Web3 apps."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Rithvik K" />
+		<meta property="og:image" content="%PUBLIC_URL%/homepage.jpeg" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@BngRithvik" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Apply saved theme before first paint to avoid a flash -->
+		<script>
+			try {
+				var t = localStorage.getItem("theme");
+				if (t !== "light" && t !== "dark")
+					t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+				document.documentElement.dataset.theme = t;
+			} catch (e) {}
+		</script>
+
+		<title>Rithvik K</title>
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>

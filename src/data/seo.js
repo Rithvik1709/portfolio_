@@ -1,37 +1,43 @@
+const KEYWORDS = [
+	"Rithvik",
+	"Rithvik K",
+	"AI Engineer",
+	"Machine Learning",
+	"Open Source",
+	"Blockchain",
+	"Portfolio",
+];
+
 const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Rithvik K — AI/ML engineer, open-source mentor, and technical writer building RAG systems, AI chatbots, and Web3 apps.",
+		keywords: KEYWORDS,
 	},
-
 	{
 		page: "about",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Rithvik's open-source contributions, mentorship roles, community work, and tech talks.",
+		keywords: KEYWORDS,
 	},
-
 	{
 		page: "articles",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Long-form writing by Rithvik K on AI, machine learning, RAG, blockchain, and developer tooling.",
+		keywords: KEYWORDS,
 	},
-
 	{
 		page: "projects",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Projects by Rithvik K spanning AI, blockchain, IoT, and web development — most are open source.",
+		keywords: KEYWORDS,
 	},
-
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Get in touch with Rithvik K for collaborations, talks, mentorship, or opportunities.",
+		keywords: KEYWORDS,
 	},
 ];
 

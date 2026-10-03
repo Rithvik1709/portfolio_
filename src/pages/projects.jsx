@@ -1,61 +1,57 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useMemo, useState } from "react";
 
-import NavBar from "../components/common/navBar";
-import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
-import AllProjects from "../components/projects/allProjects";
+import Layout from "../components/layout/layout";
+import { ProjectList } from "../components/lists";
 
 import INFO from "../data/user";
-import SEO from "../data/seo";
 
-import "./styles/projects.css";
+import "./styles/pages.css";
 
 const Projects = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
+	const [filter, setFilter] = useState("All");
+
+	const categories = useMemo(() => {
+		const counts = INFO.projects.reduce((acc, p) => {
+			acc[p.category] = (acc[p.category] || 0) + 1;
+			return acc;
+		}, {});
+		return [["All", INFO.projects.length], ...Object.entries(counts)];
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "projects");
+	const visible =
+		filter === "All" ? INFO.projects : INFO.projects.filter((p) => p.category === filter);
 
 	return (
-		<React.Fragment>
-			<Helmet>
-				<title>{`Projects | ${INFO.main.title}`}</title>
-				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
-			</Helmet>
+		<Layout active="projects" title="Projects" seoPage="projects">
+			<header className="page-head">
+				<h1>Projects</h1>
+				<p>
+					Things I've built, mostly to learn something. All of them are on{" "}
+					<a className="link" href={INFO.socials.github} target="_blank" rel="noreferrer">
+						GitHub
+					</a>
+					.
+				</p>
+			</header>
 
-			<div className="page-content">
-				<NavBar active="projects" />
-				<div className="content-wrapper">
-					<div className="projects-logo-container">
-						<div className="projects-logo">
-							<Logo width={46} />
-						</div>
-					</div>
-					<div className="projects-container">
-						<div className="title projects-title">
-							TL;DR - learnt hacking around the Internet.
-						</div>
-
-						<div className="subtitle projects-subtitle">
-							Worked on some of the cool projects,these are some of the projects thats I have built that align with my Skills
-						</div>
-
-						<div className="projects-list">
-							<AllProjects />
-						</div>
-					</div>
-					<div className="page-footer">
-						<Footer />
-					</div>
-				</div>
+			<div className="tabs" role="tablist" aria-label="Filter projects">
+				{categories.map(([name, count]) => (
+					<button
+						key={name}
+						role="tab"
+						aria-selected={filter === name}
+						onClick={() => setFilter(name)}
+					>
+						{name}
+						<sup>{count}</sup>
+					</button>
+				))}
 			</div>
-		</React.Fragment>
+
+			<div className="list-block">
+				<ProjectList projects={visible} />
+			</div>
+		</Layout>
 	);
 };
 
