@@ -1,5 +1,18 @@
 [
 	{
+		"date": "03 Oct 2026",
+		"title": "What If Neural Networks Came in Parts?",
+		"description": "You can build a website out of parts. I’ve shipped code that leaned on a dozen libraries written by people I’ll never meet, and it mostly just worked. My laptop takes a USB stick made years before the laptop existed…",
+		"keywords": [
+			"Transformers",
+			"Machine Learning",
+			"AI",
+			"LLM"
+		],
+		"link": "https://tutorialsavvy.com/what-if-neural-networks-came-in-parts-574b20ccc490",
+		"publication": "TutorialSavvy"
+	},
+	{
 		"date": "29 Sep 2026",
 		"title": "Large World Models(LWM): Teaching AI to Imagine the World",
 		"description": "What LWMs are, how they work under the hood, who’s building them in 2026, and why your production stack still runs on LLMs",
@@ -103,17 +116,5 @@
 			"Vector Database"
 		],
 		"link": "https://medium.com/@rithvikbng/building-a-multimodal-fusion-search-engine-with-qdrant-clip-whisper-text-image-and-audio-in-ec0cb6996e17"
-	},
-	{
-		"date": "29 Oct 2025",
-		"title": "Automating App Localization with Lingo.dev: The Developer’s Guide to Seamless CI/CD Integration",
-		"description": "“If your product speaks only one language, you’re already missing 80% of the world.”",
-		"keywords": [
-			"DevOps",
-			"CI/CD",
-			"Pipeline",
-			"Automation"
-		],
-		"link": "https://medium.com/@rithvikbng/automating-app-localization-with-lingo-dev-the-developers-guide-to-seamless-ci-cd-integration-46a167fc5428"
 	}
 ]
