@@ -1,5 +1,17 @@
 [
 	{
+		"date": "04 Oct 2026",
+		"title": "Giving AI Agents a Memory That Lives on the Device: Qdrant Edge",
+		"description": "How I built a hybrid-search, self-cleaning long-term memory for an AI agent that runs entirely inside the app process: no server, no network, about 150 lines of Python.",
+		"keywords": [
+			"Machine Learning",
+			"AI",
+			"Vector Database",
+			"LLM"
+		],
+		"link": "https://medium.com/@rithvikbng/giving-ai-agents-a-memory-that-lives-on-the-device-qdrant-edge-b3f9b4a1eebc"
+	},
+	{
 		"date": "03 Oct 2026",
 		"title": "What If Neural Networks Came in Parts?",
 		"description": "You can build a website out of parts. I’ve shipped code that leaned on a dozen libraries written by people I’ll never meet, and it mostly just worked. My laptop takes a USB stick made years before the laptop existed…",
@@ -104,17 +116,5 @@
 			"Memories"
 		],
 		"link": "https://medium.com/@rithvikbng/building-a-mental-health-emotion-memory-system-using-qdrant-ml-859bd1d6cacc"
-	},
-	{
-		"date": "06 Nov 2025",
-		"title": "Building a Multimodal Fusion Search Engine with Qdrant, CLIP & Whisper: Text, Image, and Audio in One Query",
-		"description": "Search beyond words. Imagine describing an image, humming a tune, or typing a phrase and instantly retrieving relevant visuals, sounds, or documents. Multimodal fusion search where text, image, and audio all speak the…",
-		"keywords": [
-			"Machine Learning",
-			"Qdrant",
-			"Multimodal",
-			"Vector Database"
-		],
-		"link": "https://medium.com/@rithvikbng/building-a-multimodal-fusion-search-engine-with-qdrant-clip-whisper-text-image-and-audio-in-ec0cb6996e17"
 	}
 ]
